@@ -1,12 +1,21 @@
-import { View, Text, SafeAreaView, StyleSheet } from "react-native";
+import { View, Text, SafeAreaView, StyleSheet, ScrollView } from "react-native";
 import Header from "../components/home/Header";
+import Post from "../components/home/Post";
 import Stories from "../components/home/Stories";
+import React from "react";
+import { posts } from "../libs/post";
 
 export default function HomeScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <Header />
-      <Stories />
+      <ScrollView>
+        <Stories />
+
+        {posts.map((post, index) => (
+          <Post post={post} key={index} />
+        ))}
+      </ScrollView>
     </SafeAreaView>
   );
 }

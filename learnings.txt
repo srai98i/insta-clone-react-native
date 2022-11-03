@@ -1,0 +1,4 @@
+1)
+- resizeMode: for images where frame doesnt match raw image dimensions 
+- TouchableOpacity : opacity of view decreases when clicked
+
