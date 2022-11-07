@@ -4,6 +4,7 @@ import Post from "../components/home/Post";
 import Stories from "../components/home/Stories";
 import React from "react";
 import { posts } from "../libs/post";
+import BottomTab from "../components/home/BottomTab";
 
 export default function HomeScreen() {
   return (
@@ -16,6 +17,7 @@ export default function HomeScreen() {
           <Post post={post} key={index} />
         ))}
       </ScrollView>
+      <BottomTab />
     </SafeAreaView>
   );
 }
