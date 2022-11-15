@@ -1,16 +1,9 @@
 import React from "react";
-import {
-  View,
-  Text,
-  SaveAreaView,
-  StyleSheet,
-  Image,
-  TouchableOpacity,
-} from "react-native";
+import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import postFooterIcons from "../../../libs/postFooterIcons";
 
 export default function PostFooter({ post }) {
-  function Icon({ imgStyle, imgUrl }) {
+  function Icon({ imgUrl }) {
     return (
       <TouchableOpacity>
         <Image style={styles.footerIcon} source={{ uri: imgUrl }} />
@@ -102,8 +95,8 @@ styles = StyleSheet.create({
     flexDirection: "row",
   },
   footerIcon: {
-    width: 33,
-    height: 33,
+    width: 30,
+    height: 30,
     marginLeft: 7,
     marginRight: 5,
   },
